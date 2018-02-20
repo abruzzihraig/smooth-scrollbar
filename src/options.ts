@@ -5,6 +5,7 @@ import {
 
 import {
   ScrollbarOptions,
+  Offsets,
 } from './interfaces/';
 
 export class Options {
@@ -54,6 +55,11 @@ export class Options {
    *   plugins[pluginName] = pluginOptions: any
    */
   readonly plugins: any = {};
+
+  /**
+   * Offsets for the thumb bar
+   */
+  thumbOffsets: Offsets | null = null;
 
   constructor(config: Partial<ScrollbarOptions> = {}) {
     Object.keys(config).forEach((prop) => {
