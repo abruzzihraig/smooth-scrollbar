@@ -31,7 +31,7 @@ export class ScrollbarThumb implements I.ScrollbarThumb {
   constructor(
     private _direction: TrackDirection,
     private _minSize = 0,
-    private _offsets = { top: 0, right: 0, bottom: 0, left: 0 },
+    private _offsets: I.Offsets = { top: 0, right: 0, bottom: 0, left: 0 },
   ) {
     this.element.className = `scrollbar-thumb scrollbar-thumb-${_direction}`;
 

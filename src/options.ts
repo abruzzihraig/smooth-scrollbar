@@ -59,7 +59,7 @@ export class Options {
   /**
    * Offsets for the thumb bar
    */
-  thumbOffsets: Offsets | null = null;
+  thumbOffsets: Offsets = { top: 0, right: 0, bottom: 0, left: 0 };
 
   constructor(config: Partial<ScrollbarOptions> = {}) {
     Object.keys(config).forEach((prop) => {
