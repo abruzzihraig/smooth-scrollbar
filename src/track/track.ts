@@ -19,12 +19,14 @@ export class ScrollbarTrack implements I.ScrollbarTrack {
   constructor(
     direction: TrackDirection,
     thumbMinSize: number = 0,
+    thumbOffsets: I.Offsets = { top: 0, right: 0, bottom: 0, left: 0 },
   ) {
     this.element.className = `scrollbar-track scrollbar-track-${direction}`;
 
     this.thumb = new ScrollbarThumb(
       direction,
       thumbMinSize,
+      thumbOffsets,
     );
 
     this.thumb.attachTo(this.element);

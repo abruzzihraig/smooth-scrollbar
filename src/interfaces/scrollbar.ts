@@ -12,7 +12,15 @@ export type ScrollbarOptions = {
   alwaysShowTracks: boolean,
   continuousScrolling: boolean,
   wheelEventTarget: EventTarget | null,
+  thumbOffsets: Offsets,
   plugins: any,
+};
+
+export type Offsets = {
+  top: number,
+  right: number,
+  bottom: number,
+  left: number,
 };
 
 // Scrollbar.size
